@@ -34,7 +34,7 @@
 <body>
 
     @include('frontend.header')
-    <main id="main">
-        @yield('container')
-    </main>
+    <section>
+        @yield('content')
+    </section>
     @include('frontend.footer')
