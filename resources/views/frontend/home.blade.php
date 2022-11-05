@@ -1,4 +1,4 @@
-@extends('frontend.template')
+@extends('frontend.template.template')
 <section id="hero" class="d-flex align-items-center">
     <div class="container-fluid" data-aos="fade-up">
         <div class="row justify-content-center">
@@ -12,34 +12,45 @@
                 <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
             </div>
         </div>
+        <div class="wave" id="wave1" style="--i:1; background-position-x: 400px;"></div>
+        <div class="wave" id="wave2" style="--i:2; background-position-x: 300px;"></div>
+        <div class="wave" id="wave3" style="--i:3; background-position-x: 200px;"></div>
+        <div class="wave" id="wave4" style="--i:4; background-position-x: 100px;"></div>
     </div>
 </section>
 @section('content')
     <main id="main">
         <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <section id="about" class="about py-3">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
                         <img src="assets/img/about.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                        <h3>Voluptatem dignissimos provident quasi corporis</h3>
+                        <h3>Katalog Kelas</h3>
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            " Barang siapa tidak mau merasakan pahitnya belajar, ia akan merasakan hinanya kebodohan
+                            sepanjang hidupnya"
+                            --Imam Syafi'i rahimahullah--
                         </p>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</li>
-                            <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate
-                                velit.</li>
-                            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda
-                                mastiro dolore eu fugiat nulla pariatur.</li>
+                            <li><i class="bi bi-check-circle"></i>
+                                Tersedia Kelas GRATIS dan berbayar
+                            </li>
+                            <li><i class="bi bi-check-circle"></i>
+                                Tersedia Kelas Offline di wilayah kota Kendari dan sekitarnya
+                            </li>
+                            <li><i class="bi bi-check-circle"></i>
+                                Di bimbing langsung oleh tenaga pengajar yang sudah berpengalaman di bidangnya dan sudah
+                                sering menangani proyek tentang pengembangan Aplikasi web dan mobile</li>
+                            <li><i class="bi bi-check-circle"></i>
+                                Bisa belajar di mana saja dan kapan saja dengan waktu yang fleksibel</li>
+                            <li><i class="bi bi-check-circle"></i>
+                                Berkesempatan untuk gabung dalam proyek yang di akusisi oleh kendari coding dan
+                                technoreative</li>
                         </ul>
-                        <a href="#" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
+                        <a href="#" class="read-more">Lihat Katalog Kelas <i class="icofont-long-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -112,7 +123,8 @@
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box iconbox-orange ">
                             <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="100" height="100" viewBox="0 0 600 600"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path stroke="none" stroke-width="0" fill="#f5f5f5"
                                         d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
                                     </path>
@@ -714,15 +726,11 @@
                             <p>+1 5589 55488 55</p>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col-lg-6 ">
-                        <iframe class="mb-4 mb-lg-0"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                            frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="384" id="gmap_canvas" src="https://maps.google.com/maps?q=kendaricoding&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br><style>.mapouter{position:relative;text-align:right;height:384px;width:600px;}</style><a href="https://www.embedgooglemap.net">google embed code</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:384px;width:600px;}</style></div></div>
                     </div>
 
                     <div class="col-lg-6">

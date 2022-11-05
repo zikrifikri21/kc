@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KelasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,16 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend/Home');
-});
+Route::get('/', [KelasController::class, 'index']);
+
+Route::get('/class', [KelasController::class, 'class']);
 
 Route::get('/auth', function () {
     return view('/auth/login');
 });
 Route::get('/register', function () {
     return view('/auth/register');
-});
-Route::get('/class', function () {
-    return view('/frontend/class');
 });

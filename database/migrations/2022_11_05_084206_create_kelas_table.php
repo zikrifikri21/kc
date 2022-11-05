@@ -13,16 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catalog', function (Blueprint $table) {
+        Schema::create('kelas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('catalog_id');
             $table->foreignId('user_id');
-            $table->string('title');
-            $table->string('slug')->unique();
-            $table->string('image')->nullable();
-            $table->text('excerpt');
-            $table->text('body');
-            $table->timestamp('published_at')->nullable();
+            $table->foreignId('katalogs_id');
+            $table->string('nama_kelas');
+            $table->string('status_kelas');
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catalog');
+        Schema::dropIfExists('kelas');
     }
 };
