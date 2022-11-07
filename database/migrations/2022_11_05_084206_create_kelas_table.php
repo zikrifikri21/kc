@@ -18,6 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('katalogs_id');
             $table->string('nama_kelas');
+            $table->string('slug')->unique();
+            $table->string('keterangan');
             $table->string('status_kelas');
             $table->timestamps();
         });

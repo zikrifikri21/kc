@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\kelas;
 
-class KelasController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,6 +20,13 @@ class KelasController extends Controller
     {
         return view('frontend.class', [
             "kelas" => kelas::all()
+        ]);
+    }
+
+    public function keterangan(kelas $kelas)
+    {
+        return view('frontend.keterangan', [
+            "kelas" => $kelas
         ]);
     }
 
